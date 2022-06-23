@@ -180,4 +180,4 @@ app.get('/responses', async(req,res) => {
 })
 
 
-app.listen(6969)
+app.listen(process.env.PORT || 6969)
