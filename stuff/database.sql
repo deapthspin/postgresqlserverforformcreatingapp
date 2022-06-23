@@ -20,3 +20,4 @@ create table response(
     questionNum numeric,
     response numeric
 );
+
