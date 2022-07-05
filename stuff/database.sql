@@ -1,20 +1,20 @@
 CREATE DATABASE forms;
+CREATE EXTENSION "uuid-ossp";
 
-
-create table program(
+CREATE TABLE program(
     form_id SERIAL PRIMARY KEY,
     form_uid uuid DEFAULT uuid_generate_v4(),
     title text unique
     
 );
 
-create table question(
+CREATE TABLE question(
     question_id integer,
     formId integer,
     question text
-)
+);
 
-create table response(
+CREATE TABLE response(
     response_id SERIAL PRIMARY KEY,
     formId numeric,
     questionNum numeric,
